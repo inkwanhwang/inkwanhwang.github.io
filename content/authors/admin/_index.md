@@ -86,10 +86,12 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  # courses:
-  #   - course: BS in Computer Science & Engineering
-  #     institution: Pohang University of Science and Technology (POSTECH)
-  #     year: Feb 2021 - Feb 2025
+  - area: BS in Computer Science & Engineering
+    institution: Pohang University of Science and Technology (POSTECH)
+    date_start: Feb 2021
+    date_end: Feb 2025
+    summary:
+      GPA: 3.91/4.30
 
 work:
   - position: Director of Cloud Infrastructure
