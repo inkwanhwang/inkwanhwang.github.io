@@ -94,28 +94,24 @@ education:
       GPA: 3.91/4.30
 
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
-    company_url: ''
+  - position: Research Intern
+    company_name: Efficient Learning Lab, POSTECH
+    company_url: 'https://effl.postech.ac.kr '
     company_logo: ''
-    date_start: 2021-01-01
-    date_end: ''
+    date_start: 2022-11-24
+    date_end: 
     summary: |2-
-      Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
-    company_url: ''
+      - Quantized ML Defense Code for NAND Flash Memory
+      - STIP (Samsung Talented Internship)
+  - position: Intern
+    company_name: Samsung Electronics
+    company_url: 'https://semiconductor.samsung.com '
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
-    summary: |
-      Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+    date_start: 2022-07-04
+    date_end: 2022-08-26
+    summary: |2-
+      - Quantized ML Defense Code for NAND Flash Memory
+      - STIP (Samsung Talented Internship)
 
 # # Skills
 # # Add your own SVG icons to `assets/media/icons/`
