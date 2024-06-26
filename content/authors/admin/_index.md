@@ -91,7 +91,7 @@ education:
     date_start: 2021-02-19
     date_end: 2025-02-03
     summary: |
-      GPA: 3.91/4.30
+      GPA: 3.92/4.30
 
 work:
   - position: Research Intern
