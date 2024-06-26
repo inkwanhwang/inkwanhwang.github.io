@@ -90,7 +90,6 @@ education:
     - course: BS in Computer Science & Engineering
       institution: Pohang University of Science and Technology (POSTECH)
       year: Feb 2021 - Feb 2025
-      GPA: 3.91/4.30
 
 work:
   - position: Director of Cloud Infrastructure
