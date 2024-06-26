@@ -45,6 +45,9 @@ profiles:
   #   url: https://scholar.google.com/
   # - icon: academicons/orcid
   #   url: https://orcid.org/
+  - icon: cv
+    icon_pack: ai
+    link: uploads/CV_inkwan.pdf
 
 interests:
   - Artificial Intelligence
