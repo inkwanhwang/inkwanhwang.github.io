@@ -101,8 +101,7 @@ work:
     date_start: 2023-11-24
     date_end: 
     summary: |2-
-      - Quantized ML Defense Code for NAND Flash Memory
-      - STIP (Samsung Talented Internship)
+
   - position: Intern
     company_name: Samsung Electronics
     company_url: 'https://semiconductor.samsung.com '
