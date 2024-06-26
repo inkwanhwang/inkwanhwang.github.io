@@ -98,7 +98,7 @@ work:
     company_name: Efficient Learning Lab, POSTECH
     company_url: 'https://effl.postech.ac.kr '
     company_logo: ''
-    date_start: 2022-11-24
+    date_start: 2023-11-24
     date_end: 
     summary: |2-
       - Quantized ML Defense Code for NAND Flash Memory
@@ -106,7 +106,7 @@ work:
   - position: Intern
     company_name: Samsung Electronics
     company_url: 'https://semiconductor.samsung.com '
-    company_logo: ''
+    company_logo: 'Samsung_Orig.png'
     date_start: 2022-07-04
     date_end: 2022-08-26
     summary: |2-
