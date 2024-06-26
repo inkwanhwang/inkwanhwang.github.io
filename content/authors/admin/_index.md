@@ -88,8 +88,6 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
   - area: BS in Computer Science & Engineering
     institution: Pohang University of Science and Technology (POSTECH)
-    summary:
-      GPA: 3.91/4.30
 
 work:
   - position: Director of Cloud Infrastructure
