@@ -50,9 +50,9 @@ profiles:
     link: uploads/CV_inkwan.pdf
 
 interests:
-  - Artificial Intelligence
-  - Computational Linguistics
-  - Information Retrieval
+  - Model Compression
+  - Large Language Models
+  - Robot Learning
 
 education:
   - area: PhD Artificial Intelligence
