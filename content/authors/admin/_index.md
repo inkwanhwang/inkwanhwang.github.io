@@ -88,6 +88,8 @@ education:
   #     - lorem ipsum dolor sit amet, consectetur adipiscing elit
   - area: BS in Computer Science & Engineering
     institution: Pohang University of Science and Technology (POSTECH)
+    date_start: 2021-02-19
+    date_end: 2025-02-03
 
 work:
   - position: Director of Cloud Infrastructure
