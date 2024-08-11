@@ -1,60 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Inkwan Hwang</title>
-    <link>http://localhost:1313/</link>
-      <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <description>Inkwan Hwang</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 24 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <title>Paper Review | Inkwan Hwang</title>
+    <link>http://localhost:1313/tags/paper-review/</link>
+      <atom:link href="http://localhost:1313/tags/paper-review/index.xml" rel="self" type="application/rss+xml" />
+    <description>Paper Review</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 22 May 2024 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
-      <title>Inkwan Hwang</title>
-      <link>http://localhost:1313/</link>
+      <title>Paper Review</title>
+      <link>http://localhost:1313/tags/paper-review/</link>
     </image>
-    
-    <item>
-      <title>Example Talk</title>
-      <link>http://localhost:1313/event/example/</link>
-      <pubDate>Sat, 01 Jun 2030 13:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/event/example/</guid>
-      <description>&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
-&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
-  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
-&lt;/span&gt;
-  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Click on the &lt;strong&gt;Slides&lt;/strong&gt; button above to view the built-in slides feature.&lt;/span&gt;
-&lt;/div&gt;
-&lt;p&gt;Slides can be added in a few ways:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create&lt;/strong&gt; slides using Hugo Blox Builder&amp;rsquo;s &lt;a href=&#34;https://docs.hugoblox.com/reference/content-types/&#34;&gt;&lt;em&gt;Slides&lt;/em&gt;&lt;/a&gt; feature and link using &lt;code&gt;slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Upload&lt;/strong&gt; an existing slide deck to &lt;code&gt;static/&lt;/code&gt; and link using &lt;code&gt;url_slides&lt;/code&gt; parameter in the front matter of the talk file&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embed&lt;/strong&gt; your slides (e.g. Google Slides) or presentation video on this page using &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/&#34;&gt;shortcodes&lt;/a&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Further event details, including &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/&#34;&gt;page elements&lt;/a&gt; such as image galleries, can be added to the body of this page.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Awards</title>
-      <link>http://localhost:1313/awards/</link>
-      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/awards/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Background</title>
-      <link>http://localhost:1313/background/</link>
-      <pubDate>Sun, 11 Aug 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/background/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>🤖 Accelerating Transformers via Conditional Computation: As Aspect of Mixture-of-Depths</title>
       <link>http://localhost:1313/post/mixture-of-depth/</link>
       <pubDate>Wed, 22 May 2024 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/post/mixture-of-depth/</guid>
-      <description>&lt;p&gt;This post is cross-posted at &lt;a href=&#34;https://effml-postech.github.io/docs/spring24/16_/&#34;&gt;EffL@POSTECH&lt;/a&gt;&lt;/p&gt;
+      <description>&lt;p&gt;This post is cross-posted at &lt;a href=&#34;https://effml-postech.github.io/docs/spring24/16_/&#34;&gt;EffL POSTECH&lt;/a&gt;&lt;/p&gt;
 &lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
 &lt;p&gt;“Choice and concentration” is an effective strategy for achieving success in problems. Sometimes, it is not necessary to put the same amount of effort and time into all problems. Expending energy on trivial issues may fail to concentrate on what truly matters. Similarly, in language models, there is a technique that does not focus equally on all tokens but allocates less budget to non-essential tokens. This technique is called conditional computation.&lt;/p&gt;
 &lt;p&gt;In this post, We will explain conditional computation strategies for Transformers, focusing on a technology announced this year called &lt;strong&gt;Mixture-of-Depths.&lt;/strong&gt;&lt;/p&gt;
@@ -222,41 +185,6 @@ This figure shows the performance of MoDE and its two proposed structures. The t
 Joshua et.al.,&lt;U&gt;&lt;a href=&#34;https://arxiv.org/abs/2303.09752&#34; target=&#34;_blank&#34;&gt; COLT5: Faster Long-Range Transformers with Conditional Computation &lt;/a&gt;&lt;/U&gt;, EMNLP, 2023.&lt;br&gt;
 Noam et.al.,&lt;U&gt;&lt;a href=&#34;https://arxiv.org/abs/1701.06538&#34; target=&#34;_blank&#34;&gt; OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER &lt;/a&gt;&lt;/U&gt;, ICLR, 2017.
 AstraMind AI (2024). Unofficial implementation for the paper &amp;ldquo;Mixture-of-Depths&amp;rdquo;. &lt;a href=&#34;https://github.com/astramind-ai/Mixture-of-depths&#34;&gt;https://github.com/astramind-ai/Mixture-of-depths&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Blg</title>
-      <link>http://localhost:1313/blog/</link>
-      <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/blog/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Projects</title>
-      <link>http://localhost:1313/projects/</link>
-      <pubDate>Sun, 19 May 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/projects/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>🏖️ Summer Break: Chance to See the Wider World</title>
-      <link>http://localhost:1313/post/summer-break/</link>
-      <pubDate>Wed, 14 Sep 2022 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/summer-break/</guid>
-      <description>&lt;p&gt;This post is cross-posted at &lt;a href=&#34;https://times.postech.ac.kr/news/articleView.html?idxno=22191&#34;&gt;The Postech Times&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;I think summer break is a time to do things that I have not done before and gain various experiences. I had a good opportunity this summer to meet friends from MIT, Berkeley, Georgia Tech, Seoul National University, and KAIST at the same time during my research experience. Meeting students from various universities around the world, I realized that what I was thinking was wrong, and I was able to broaden my horizons.&lt;/p&gt;
-&lt;h2 id=&#34;academic-growth&#34;&gt;Academic Growth&lt;/h2&gt;
-&lt;p&gt;During this summer break, I studied machine learning. Although I am planning to go to the Department of Computer Science and Engineering, my knowledge of machine learning was no different from students in other majors. I started reading my first paper without knowing exactly what machine learning was. Considering that it took me two weeks to read a 36-page paper, and at times, I think I repeatedly forgot what I was reading while I was reading it. Also, I was forgetting the context of the thesis when I looked for words because of my poor English skills. Acquiring knowledge through a thesis was completely different from learning from a power point presentation and much more difficult.
-As I repeatedly read and made use of related papers every day for two months, the speed of reading papers and gaining background knowledge increased. In no time, I could determine the research direction by finding and discussing the problems of the thesis and the points to be developed. I was able to learn how to read papers by listening to advice from various mentors.&lt;/p&gt;
-&lt;h2 id=&#34;a-big-frog-in-a-small-pond&#34;&gt;A Big Frog in a Small Pond&lt;/h2&gt;
-&lt;p&gt;Previously, I thought good grades represented high academic achievement. But this time, I met friends from various universities and realized that I was wrong. They were cultivating their own special experiences in various ways, such as studying, researching, or participating in competitions that they were interested in. Some friends studied all of their undergraduate physics in high school, some studied machine learning on their own, and some made an automobile through personal research. Compared to them, all I had was grades marked with a single letter of the alphabet.
-Maybe I was a frog in a pond called university. I had the idea that attending a good school would also guarantee individual competence. However, through this summer break, I realized that individual competence depends on individual efforts and that universities do not guarantee their students competence. While I was away from campus for a while during the summer break, I saw firsthand that countless people who are not from POSTECH also make a lot of effort, too. However, I am really glad that I have realized this now. Better late than never. The wider view of the world means that there are many ways to move forward and there are various ways to grow further.&lt;/p&gt;
-&lt;h2 id=&#34;my-next-chapter&#34;&gt;My next chapter&lt;/h2&gt;
-&lt;p&gt;I think there are countless career paths for Postechians. On campus, however, those paths are likely to be uniform, and getting out of them seems very difficult. When I was a freshman, I was planning to get a Ph.D. because I thought I could solve the military service problem. However, several doctors working in the industry told me not to go to graduate school if I did not fit in. They told me to think carefully about what I want because the process of obtaining a doctorate will not be smooth, as it is a process of growing into an independent researcher. It is necessary to think about what I actually want and to think about various career paths instead of deciding my career path while being influenced by the people around me.
-Through my experience during the summer break, I set a goal of studying abroad and am looking for various opportunities. I am planning to apply for an internship for an overseas company, and I am planning to use the summer session and research participation that Postech provides. I hope all Postechians nurture a bigger dream by expanding their horizons not only to our school but also to the world.&lt;/p&gt;
 </description>
     </item>
     

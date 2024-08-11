@@ -1,16 +1,16 @@
 ---
-title: 🤖 Accelerating Transformers via Conditional Computation - As Aspect of Mixture-of-Depths
-summary: Create a personal knowledge base and share your knowledge with your peers.
-date: 2023-10-26
+title: '🤖 Accelerating Transformers via Conditional Computation: As Aspect of Mixture-of-Depths'
+summary: ' '
+date: 2024-05-22  
 authors:
   - admin
   - Minjae Park
 tags:
-  - Academic
+  - Paper review
 image:
   caption: 'Image credit: [**DALL·E 3**](https://openai.com/index/dall-e-3/)'
 ---
-This post is cross-posted at [EffL POSTECH](https://effml-postech.github.io/docs/spring24/16_/)
+This post is cross-posted at [EffL@POSTECH](https://effml-postech.github.io/docs/spring24/16_/)
 
 ## **Introduction**
 “Choice and concentration” is an effective strategy for achieving success in problems. Sometimes, it is not necessary to put the same amount of effort and time into all problems. Expending energy on trivial issues may fail to concentrate on what truly matters. Similarly, in language models, there is a technique that does not focus equally on all tokens but allocates less budget to non-essential tokens. This technique is called conditional computation.

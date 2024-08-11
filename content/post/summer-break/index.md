@@ -1,6 +1,6 @@
 ---
-title: 🏖️ Summer Break - Chance to See the Wider World
-summary: ''
+title: '🏖️ Summer Break: Chance to See the Wider World'
+summary: ' '
 date: 2022-09-14
 authors:
   - admin
