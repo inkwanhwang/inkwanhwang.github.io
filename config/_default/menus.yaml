@@ -10,12 +10,18 @@ main:
   - name: Background
     url: background/
     weight: 11
+  - name: Publication
+    url: publication/
+    weight: 11.5
   - name: Projects
-    url: /#talks
+    url: projects/
     weight: 12
   - name: Honors & Awards
     url: awards/
     weight: 13
   - name: Mentoring
-    url: mentor/
+    url: teaching/
     weight: 14
+  - name: Blog
+    url: blog/
+    weight: 15

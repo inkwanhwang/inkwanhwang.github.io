@@ -110,7 +110,7 @@ awards:
     icon: ''
   - title: 'POSTECH-KAIST Science War: Sicence Quiz (Computer Science Division)'
     date: '2023-07-29'
-    awarder: Korea Student Aid Foundation
+    awarder: KAIST
     summary: 2nd Place, School representative in university rivalry
   - title: Global Leadership Program
     date: '2022-08-01'

@@ -5,7 +5,7 @@
     <link>http://localhost:1313/tags/academic/</link>
       <atom:link href="http://localhost:1313/tags/academic/index.xml" rel="self" type="application/rss+xml" />
     <description>Academic</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 27 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 26 Oct 2023 00:00:00 +0000</lastBuildDate>
     <image>
       <url>http://localhost:1313/media/icon_hu7729264130191091259.png</url>
       <title>Academic</title>
@@ -13,88 +13,178 @@
     </image>
     
     <item>
-      <title>🎉 Easily create your own simple yet highly customizable blog</title>
-      <link>http://localhost:1313/post/get-started/</link>
-      <pubDate>Fri, 27 Oct 2023 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/post/get-started/</guid>
-      <description>&lt;p&gt;Welcome 👋&lt;/p&gt;
-
-
-
-&lt;details class=&#34;print:hidden xl:hidden&#34; open&gt;
-  &lt;summary&gt;Table of Contents&lt;/summary&gt;
-  &lt;div class=&#34;text-sm&#34;&gt;
-  &lt;nav id=&#34;TableOfContents&#34;&gt;
-  &lt;ul&gt;
-    &lt;li&gt;&lt;a href=&#34;#overview&#34;&gt;Overview&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#get-started&#34;&gt;Get Started&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/a&gt;
-      &lt;ul&gt;
-        &lt;li&gt;&lt;a href=&#34;#-click-here-to-become-a-sponsor-and-help-support-hugo-bloxs-future-httpshugobloxcomsponsor&#34;&gt;&lt;a href=&#34;https://hugoblox.com/sponsor/&#34;&gt;❤️ Click here to become a sponsor and help support Hugo Blox&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/a&gt;&lt;/li&gt;
-      &lt;/ul&gt;
-    &lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#ecosystem&#34;&gt;Ecosystem&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#inspiration&#34;&gt;Inspiration&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#features&#34;&gt;Features&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#themes&#34;&gt;Themes&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href=&#34;#license&#34;&gt;License&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/details&gt;
-
-&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;The Hugo Blox website builder for Hugo, along with its starter templates, is designed for professional creators, educators, and teams/organizations - although it can be used to create any kind of site&lt;/li&gt;
-&lt;li&gt;The template can be modified and customised to suit your needs. It&amp;rsquo;s a good platform for anyone looking to take control of their data and online identity whilst having the convenience to start off with a &lt;strong&gt;no-code solution (write in Markdown and customize with YAML parameters)&lt;/strong&gt; and having &lt;strong&gt;flexibility to later add even deeper personalization with HTML and CSS&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;You can work with all your favourite tools and apps with hundreds of plugins and integrations to speed up your workflows, interact with your readers, and much more&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;get-started&#34;&gt;Get Started&lt;/h3&gt;
+      <title>🤖 Accelerating Transformers via Conditional Computation - As Aspect of Mixture-of-Depths</title>
+      <link>http://localhost:1313/post/mixture-of-depth/</link>
+      <pubDate>Thu, 26 Oct 2023 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/post/mixture-of-depth/</guid>
+      <description>&lt;p&gt;This post is cross-posted at &lt;a href=&#34;https://effml-postech.github.io/docs/spring24/16_/&#34;&gt;EffL POSTECH&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;introduction&#34;&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;“Choice and concentration” is an effective strategy for achieving success in problems. Sometimes, it is not necessary to put the same amount of effort and time into all problems. Expending energy on trivial issues may fail to concentrate on what truly matters. Similarly, in language models, there is a technique that does not focus equally on all tokens but allocates less budget to non-essential tokens. This technique is called conditional computation.&lt;/p&gt;
+&lt;p&gt;In this post, We will explain conditional computation strategies for Transformers, focusing on a technology announced this year called &lt;strong&gt;Mixture-of-Depths.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;paper: &lt;U&gt;&lt;a href=&#34;https://arxiv.org/abs/2404.02258&#34; target=&#34;_blank&#34;&gt; Mixture-of-Depths: Dynamically allocating compute in transformer-based language models &lt;/a&gt;&lt;/U&gt;&lt;/p&gt;
+&lt;p&gt;Let&amp;rsquo;s dive in!&lt;/p&gt;
+&lt;h2 id=&#34;understanding-the-problem-uniform-computation-in-transformers&#34;&gt;&lt;strong&gt;Understanding the problem: Uniform computation in Transformers&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;These days, most language models are based on Transformers, and we stack these blocks to make big models. When given an input sequence, tokens pass through these blocks to predict the next token. The problem is that the models spread computations uniformly across input sequences. Transformers use the same amount of computation for essential tokens as for non-essential ones. For instance, predicting a token within a sentence is cheaper than predicting the first token of the next sentence. Researchers want to address this issue by making Transformers focus on important tokens by allocating unimportant tokens with fewer computing resources.&lt;/p&gt;
+&lt;h2 id=&#34;conditional-computation-for-transformers&#34;&gt;&lt;strong&gt;Conditional computation for Transformers&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;👉 &lt;a href=&#34;https://hugoblox.com/templates/&#34;&gt;&lt;strong&gt;Create a new site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;📚 &lt;a href=&#34;https://docs.hugoblox.com/&#34;&gt;&lt;strong&gt;Personalize your site&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;💬 &lt;a href=&#34;https://discord.gg/z8wNYzb&#34;&gt;Chat with the &lt;strong&gt;Hugo Blox community&lt;/strong&gt;&lt;/a&gt; or &lt;a href=&#34;https://discourse.gohugo.io&#34;&gt;&lt;strong&gt;Hugo community&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;🐦 Twitter: &lt;a href=&#34;https://twitter.com/GetResearchDev&#34;&gt;@GetResearchDev&lt;/a&gt; &lt;a href=&#34;https://twitter.com/GeorgeCushen&#34;&gt;@GeorgeCushen&lt;/a&gt; #MadeWithHugoBlox&lt;/li&gt;
-&lt;li&gt;💡 &lt;a href=&#34;https://github.com/HugoBlox/hugo-blox-builder/issues&#34;&gt;Request a &lt;strong&gt;feature&lt;/strong&gt; or report a &lt;strong&gt;bug&lt;/strong&gt; for &lt;em&gt;Hugo Blox&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;⬆️ &lt;strong&gt;Updating Hugo Blox?&lt;/strong&gt; View the &lt;a href=&#34;https://docs.hugoblox.com/reference/update/&#34;&gt;Update Guide&lt;/a&gt; and &lt;a href=&#34;https://github.com/HugoBlox/hugo-blox-builder/releases&#34;&gt;Release Notes&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Early exiting&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=./Early_Exiting.png&gt; 
+&lt;/p&gt;
+Instead of passing through all layers, the model can stop early if it is confident enough about its prediction. This saves computation time and resources. Large pre-trained models like BERT can use early exiting to maintain performance while reducing computing resources.
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;CoLT5&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=./colt1.png width = &#34;50%&#34; height = &#34;50%&#34;&gt;
+&lt;/p&gt;
+CoLT5 is an architecture allowing unnecessary tokens pass through light attention and light MLP. Light attention refers to a local attention layer that just calculates attention value between a few nearby tokens. Conversely, heavy Attention refers to a global attention layer that calculates some chosen token (chosen by router) and calculates attention values with all input tokens. It uses top-k routing mechanism that performs well (will be discussed in a later section).
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=./colt2.png width = &#34;40%&#34; height = &#34;40%&#34;&gt;
+&lt;/p&gt;
+The figure above is the attention map in CoLT5. Light-colored ones indicate light attention(local attention) and bold ones indicate heavy attention. The model chooses 1/16 of query tokens and 1/8 of key tokens for heavy attention calculation.
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Mixture of Experts (MoE)&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=./moe1.png&gt;
+&lt;/p&gt;
+MoE is a model consisting of parallel expert models which is fitted to certain domains. Token-level routing decisions are made across the network depths. Routing decision of the model determines which expert it will be sent to.
+&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;crowd-funded-open-source-software&#34;&gt;Crowd-funded open-source software&lt;/h2&gt;
-&lt;p&gt;To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.&lt;/p&gt;
-&lt;h3 id=&#34;-click-here-to-become-a-sponsor-and-help-support-hugo-bloxs-future-httpshugobloxcomsponsor&#34;&gt;&lt;a href=&#34;https://hugoblox.com/sponsor/&#34;&gt;❤️ Click here to become a sponsor and help support Hugo Blox&amp;rsquo;s future ❤️&lt;/a&gt;&lt;/h3&gt;
-&lt;p&gt;As a token of appreciation for sponsoring, you can &lt;strong&gt;unlock &lt;a href=&#34;https://hugoblox.com/sponsor/&#34;&gt;these&lt;/a&gt; awesome rewards and extra features 🦄✨&lt;/strong&gt;&lt;/p&gt;
-&lt;h2 id=&#34;ecosystem&#34;&gt;Ecosystem&lt;/h2&gt;
+&lt;h2 id=&#34;overview-to-mixture-of-depths-mod&#34;&gt;&lt;strong&gt;Overview to Mixture-of-Depths (MoD)&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Our goal is to reduce the overall FLOPs by focusing on essential tokens and relatively fewer non-essential tokens. The router is responsible for determining the path each token should take. A trained router evaluates whether the token is necessary. If the token is deemed essential, it passes through self-attention and the subsequent MLP (requiring FLOPs). Otherwise, it bypasses these stages via a residual connection (saving FLOPs).&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=./Mixture-of-Depths.png&gt; 
+&lt;/p&gt;
+ The above image depicts the path of the model with an input sequence length of 64. The purple color shows the computation performed by that layer and the orange color shows the path taken by the residual connection.
+&lt;h2 id=&#34;routing-schemes&#34;&gt;&lt;strong&gt;Routing schemes&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Routing implementation is the most crucial part of MoD. Authors compare three routing schemes, demonstrating that MoD is the most efficient approach.&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=./Routing_Schemes.png&gt; 
+&lt;/p&gt;
+&lt;h3 id=&#34;token-choice-routing&#34;&gt;&lt;strong&gt;Token-choice routing&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Token-choice routing is a method where each token selects the path it will follow. The router produces probability distributions for each token across the computational paths. Based on this distribution, each token chooses its preferred path at each layer.&lt;/p&gt;
+&lt;p&gt;In this scheme, tokens have the flexibility to select their path, allowing for dynamic processing. However, this can lead to path-balancing issues as all tokens might prefer on the same path. It causes potential overloads on specific paths. To mitigate it, auxiliary loss is used to ensure that most tokens do not prefer a single path.&lt;/p&gt;
+&lt;h3 id=&#34;expert-choice-routing&#34;&gt;&lt;strong&gt;Expert-choice routing&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;Expert-choice routing is the reverse version of token-choice routing. Similar to token-choice routing, the router produces a probability distribution for each token. In this scheme, instead of tokens selecting their paths, each path selects the top-$k$
+ tokens based on the experts&amp;rsquo; preferences.&lt;/p&gt;
+&lt;p&gt;Using this method ensures that each path receives k tokens, maintaining balance among the paths. However, some tokens may not be selected because there might be common tokens that multiple paths prefer.&lt;/p&gt;
+&lt;h3 id=&#34;expert-choice-mod&#34;&gt;&lt;strong&gt;Expert-choice MoD&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;This method is advantageous as it reduces the overall FLOPs in the model&amp;rsquo;s forward pass. When k is smaller than the input sequence length, some tokens do not need to undergo self-attention and MLP computations. For the left and middle approaches in the figure, selecting the top-k tokens may result in increased FLOPs since multiple experts need to perform computations.&lt;/p&gt;
+&lt;p&gt;For the following reasons, the authors decided to use expert-choice routing and utilize only single path:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/GetRD/academic-file-converter&#34;&gt;Bibtex To Markdown&lt;/a&gt;:&lt;/strong&gt; Automatically import publications from BibTeX&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Efficiency of computation&lt;/strong&gt;
+There is no need for an auxiliary balancing loss.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simplicity of implementation&lt;/strong&gt;
+Tokens can be chosen with the highest output value of router in order.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Clear criteria&lt;/strong&gt;
+Top-k strategy can guarantee that the most important token is calculated since the top-$k$
+ tokens are independent of the magnitude of router weights. Since tokens are divided into two sets, one passing through self-attention and MLP, and the other passing through residual connections, a strategy is needed to partition tokens into these two sets.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;inspiration&#34;&gt;Inspiration&lt;/h2&gt;
-&lt;p&gt;&lt;a href=&#34;https://hugoblox.com/creators/&#34;&gt;Learn what other &lt;strong&gt;creators&lt;/strong&gt;&lt;/a&gt; are building with this template.&lt;/p&gt;
-&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;
+&lt;h2 id=&#34;routing&#34;&gt;&lt;strong&gt;Routing&lt;/strong&gt;&lt;/h2&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Page builder&lt;/strong&gt; - Create &lt;em&gt;anything&lt;/em&gt; with no-code &lt;a href=&#34;https://hugoblox.com/blocks/&#34;&gt;&lt;strong&gt;blocks&lt;/strong&gt;&lt;/a&gt; and &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/&#34;&gt;&lt;strong&gt;elements&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Edit any type of content&lt;/strong&gt; - Blog posts, publications, talks, slides, projects, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create content&lt;/strong&gt; in &lt;a href=&#34;https://docs.hugoblox.com/reference/markdown/&#34;&gt;&lt;strong&gt;Markdown&lt;/strong&gt;&lt;/a&gt;, &lt;a href=&#34;https://docs.hugoblox.com/getting-started/cms/&#34;&gt;&lt;strong&gt;Jupyter&lt;/strong&gt;&lt;/a&gt;, or &lt;a href=&#34;https://docs.hugoblox.com/getting-started/cms/&#34;&gt;&lt;strong&gt;RStudio&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Plugin System&lt;/strong&gt; - Fully customizable &lt;a href=&#34;https://docs.hugoblox.com/getting-started/customize/&#34;&gt;&lt;strong&gt;color&lt;/strong&gt; and &lt;strong&gt;font themes&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Display Code and Math&lt;/strong&gt; - Code syntax highlighting and LaTeX math supported&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Integrations&lt;/strong&gt; - &lt;a href=&#34;https://analytics.google.com&#34;&gt;Google Analytics&lt;/a&gt;, &lt;a href=&#34;https://disqus.com&#34;&gt;Disqus commenting&lt;/a&gt;, Maps, Contact Forms, and more!&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Beautiful Site&lt;/strong&gt; - Simple and refreshing one-page design&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Industry-Leading SEO&lt;/strong&gt; - Help get your website found on search engines and social media&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Media Galleries&lt;/strong&gt; - Display your images and videos with captions in a customizable gallery&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Mobile Friendly&lt;/strong&gt; - Look amazing on every screen with a mobile friendly version of your site&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-language&lt;/strong&gt; - 35+ language packs including English, 中文, and Português&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Multi-user&lt;/strong&gt; - Each author gets their own profile page&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy Pack&lt;/strong&gt; - Assists with GDPR&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Stand Out&lt;/strong&gt; - Bring your site to life with animation, parallax backgrounds, and scroll effects&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;One-Click Deployment&lt;/strong&gt; - No servers. No databases. Only files.&lt;/li&gt;
+&lt;li&gt;$l$
+ is a given layer.&lt;/li&gt;
+&lt;li&gt;$S$
+ is a sequence length.&lt;/li&gt;
+&lt;li&gt;$\beta=1-C/S$
+ is an user-defined capacity per batch element.&lt;/li&gt;
+&lt;li&gt;$f$
+ comprises self-attention and subsequent MLP.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h2 id=&#34;themes&#34;&gt;Themes&lt;/h2&gt;
-&lt;p&gt;Hugo Blox and its templates come with &lt;strong&gt;automatic day (light) and night (dark) mode&lt;/strong&gt; built-in. Visitors can choose their preferred mode by clicking the sun/moon icon in the header.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://docs.hugoblox.com/getting-started/customize/&#34;&gt;Choose a stunning &lt;strong&gt;theme&lt;/strong&gt; and &lt;strong&gt;font&lt;/strong&gt;&lt;/a&gt; for your site. Themes are fully customizable.&lt;/p&gt;
-&lt;h2 id=&#34;license&#34;&gt;License&lt;/h2&gt;
-&lt;p&gt;Copyright 2016-present &lt;a href=&#34;https://georgecushen.com&#34;&gt;George Cushen&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Released under the &lt;a href=&#34;https://github.com/HugoBlox/hugo-blox-builder/blob/main/LICENSE.md&#34;&gt;MIT&lt;/a&gt; license.&lt;/p&gt;
+
+$$
+x^{l+1}_i=\begin{cases}r^{l}_i f_i(\tilde{X}^l)+x^{l}_i, &amp;    \text{if } r^{l}_i &gt;  P_\beta(R^l)\\x^{l}_i, &amp; \text{if }r^{l}_i &lt;  P_\beta(R^l)\end{cases}
+$$
+
+
+&lt;p&gt;Find the $\beta$
+-th percentile ($P_\beta(R^l)$
+) of the set of router weights $R^l$
+. If the router weight $r^l$
+ is greater than $P_\beta(R^l)$
+, perform self-attention and subsequent MLP computations. If it is less than $P_\beta(R^l)$
+, pass through the token residual connection.&lt;/p&gt;
+&lt;h2 id=&#34;implementation&#34;&gt;&lt;strong&gt;Implementation&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;capacity&#34;&gt;&lt;strong&gt;Capacity&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;In this paper, capacity-based routing is employed. Token &lt;em&gt;capacity&lt;/em&gt; is the total proportion of tokens composing the input for a given operation. For instance, if the input sequence length is 100 and the capacity is 20%, each layer operates on the top-20 tokens determined by router weights.&lt;/p&gt;
+&lt;p&gt;By lowering the capacity of the computations, a smaller compute budget can be utilized per forward pass compared to the vanilla Transformers. In MoD, capacity is utilized as a hyperparameter to determine the proportion of tokens processed per layer operation.&lt;/p&gt;
+&lt;h3 id=&#34;autoregressively-sampling&#34;&gt;&lt;strong&gt;Autoregressively sampling&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;We&amp;rsquo;re looking to implement expert-choice routing, but there is one distinct problem: top-k operations rely on future tokens! Our goal is for each token to determine if it belongs to the top-k using routers. To do this, every token needs access to the router weights of future tokens. Unfortunately, we cannot predict the future router weights and cannot employ autoregressive sampling. To solve this problem, the authors propose two methods.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Simple auxiliary loss&lt;/strong&gt;&lt;/p&gt;
+&lt;p align=&#34;center&#34;&gt;
+  &lt;img src=./Routing_Analysis.png width = &#34;30%&#34; height = &#34;30%&#34;&gt; 
+&lt;/p&gt;
+Designing an additional binary cross-entropy loss function at the router&#39;s output can resolve this issue. By incorporating this, the value of tokens in the top-k is guided to be greater than 0.5, while the value of tokens not in the top-k is guided to be less than 0.5. As token passes through the router, they are categorized into top-k set if their value exceeds 0.5. Then it passes through self-attention and subsequent MLP. Conversely, tokens with values below 0.5 pass through the residual connection. Integrating such a function impacts the primary language modeling objective by approximately 0.2-0.3%. We believe this likely refers to the extent to which performance and inference time are affected.
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Small auxiliary MLP predictor&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The second method does not affect the primary language modeling objective at all. The authors design a new MLP layer that functions as a binary classifier to determine whether a token is in top-k during the training process. This classifier is trained to make these determinations, and it is used in real time during the autoregressive sampling process.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These methods, in autoregressive situation, could predict whether given token is important or not in real-time. They provide empirical results that auxiliary tasks achieved 99% accuracy.&lt;/p&gt;
+&lt;h2 id=&#34;open-source-mod-not-official&#34;&gt;&lt;strong&gt;Open source MoD&lt;/strong&gt; (not official)&lt;/h2&gt;
+&lt;p&gt;The following is an implementation of MoD that supports various LMs such as Mixtral, LLama3, and BLOOM. It implements MoD using PyTorch and Hugging Face Transformers library.&lt;/p&gt;
+&lt;p&gt;LINK: &lt;a href=&#34;https://github.com/astramind-ai/Mixture-of-depths&#34;&gt;https://github.com/astramind-ai/Mixture-of-depths&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;results&#34;&gt;&lt;strong&gt;Results&lt;/strong&gt;&lt;/h2&gt;
+&lt;h3 id=&#34;hyperparameter-tuning&#34;&gt;&lt;strong&gt;Hyperparameter tuning&lt;/strong&gt;&lt;/h3&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=./result2.png&gt;
+&lt;/p&gt;
+&lt;p&gt;The authors first trained the model with a limited FLOPs budget (6e18) to determine the optimal hyperparameters. Through training the MoD Transformer with routing blocks and self-attention blocks arranged alternately, they found the optimal parameters. The two top-middle graphs show the actual training loss graphs for the points plotted in the left graph. Among them, MoD with 12.5% capacity generally results in lower loss values than the baseline.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Computation efficiency&lt;/strong&gt;: In the right graph, the points #1, #3 and  #2, #4 pairs are MoD models of the same parameter size. Not only does it have a lower loss value, but it also runs approximately 66% faster than the baseline.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;isoflop-analysis&#34;&gt;&lt;strong&gt;isoFLOP analysis&lt;/strong&gt;&lt;/h3&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=./result1.png&gt;
+&lt;/p&gt;
+&lt;p&gt;In this figure, the training FLOPs budget is limited to 6e18, 2e19, and 1e20 comparing isoFLOP baseline and 12.5% capacity MoD.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Total loss&lt;/strong&gt;: The graph in the top-left corner shows that the isoFLOP baseline has a slightly better loss when the number of parameters is small (Note that there is a crossing point!).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Normalized loss&lt;/strong&gt;: When the x-axis is converted from parameters to FLOPs per FFW (Forward Pass) as shown in the top-right graph, MoD is better than the baseline in all cases.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;auto-regressive-evaluation&#34;&gt;&lt;strong&gt;Auto-regressive evaluation&lt;/strong&gt;&lt;/h3&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=./result3.png&gt;
+&lt;/p&gt;
+&lt;p&gt;MoD variants were evaluated during auto-regressive sampling. Each model was tested on data comprising 256,000 sequences.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Predictor accuracy&lt;/strong&gt;: Using predictor-based methods is cheaper than top-k but not more accurate. In the left graph, the performance of the predictor strategy is almost indistinguishable from the top-k strategy. Authors attribute this to the ease of learning this prediction problem.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;mixture-of-depths-and-experts-mode&#34;&gt;&lt;strong&gt;Mixture-of-Depths-and-Experts (MoDE)&lt;/strong&gt;&lt;/h3&gt;
+&lt;p align=&#34;center&#34;&gt;
+    &lt;img src=./result4.png&gt;
+&lt;/p&gt;
+This figure shows the performance of MoDE and its two proposed structures. The top-left graph demonstrates that the performance of MoDE is better than both the Baseline and MoE. The right side explains the structures of Staged MoDE and Integrated MoDE.
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Staged MoDE&lt;/strong&gt;: Two routers are deployed to first for determine the depth (MoD) and second for the expert (MoE).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integrated MoDE&lt;/strong&gt;: The MoD router and MoE router are integrated into one single Router that can simultaneously decide whether to select an expert or the residual path (depth).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The paper mentions that the former is computationally efficient as it can skip self-attention operations through the MoD router, and the latter has better performance as the router mechanism is unified and self-attention operations are always performed.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion-and-discussion&#34;&gt;&lt;strong&gt;Conclusion and discussion&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;This paper insists that using MoD with a capacity 12.5% is better than the baseline transformer model.&lt;/p&gt;
+&lt;p&gt;However, there are some unresolved limitations not discussed in the paper.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Only loss values&lt;/strong&gt;: We believe this approach only indicates if parameters converge to the training dataset, not the model&amp;rsquo;s performance. To ensure MoD&amp;rsquo;s superiority over the baseline model, additional evaluation methods such as perplexity (WikiText-2, Lambada) and specific tasks (BoolQ, Hellaswag, etc.) should be included.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;More experiments are needed&lt;/strong&gt;: The paper only compares loss values for 12.5% and 50% capacity. They also applied MoD in one of two layers, but there are no comments on why applying this method. Further studies about using one of three or four should be done.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;More baselines are needed&lt;/strong&gt;: Further studies should provide validation of MoD method by comparing other methods like COLT5 or MoE and proof of optimal hyperparameters.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;references&#34;&gt;&lt;strong&gt;References&lt;/strong&gt;&lt;/h2&gt;
+&lt;p&gt;Arian et.al.,&lt;U&gt;&lt;a href=&#34;https://arxiv.org/abs/2105.09121&#34; target=&#34;_blank&#34;&gt; Single-Layer Vision Transformers for More Accurate Early Exits with Less Overhead &lt;/a&gt;&lt;/U&gt;, arXiv, 2021.&lt;br&gt;
+Joshua et.al.,&lt;U&gt;&lt;a href=&#34;https://arxiv.org/abs/2303.09752&#34; target=&#34;_blank&#34;&gt; COLT5: Faster Long-Range Transformers with Conditional Computation &lt;/a&gt;&lt;/U&gt;, EMNLP, 2023.&lt;br&gt;
+Noam et.al.,&lt;U&gt;&lt;a href=&#34;https://arxiv.org/abs/1701.06538&#34; target=&#34;_blank&#34;&gt; OUTRAGEOUSLY LARGE NEURAL NETWORKS: THE SPARSELY-GATED MIXTURE-OF-EXPERTS LAYER &lt;/a&gt;&lt;/U&gt;, ICLR, 2017.
+AstraMind AI (2024). Unofficial implementation for the paper &amp;ldquo;Mixture-of-Depths&amp;rdquo;. &lt;a href=&#34;https://github.com/astramind-ai/Mixture-of-depths&#34;&gt;https://github.com/astramind-ai/Mixture-of-depths&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
