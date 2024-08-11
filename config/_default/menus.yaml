@@ -7,11 +7,15 @@ main:
   - name: About
     url: /
     weight: 10
-  - name: Publications
-    url: /#papers
+  - name: Background
+    url: background/
     weight: 11
   - name: Projects
     url: /#talks
     weight: 12
   - name: Honors & Awards
+    url: awards/
     weight: 13
+  - name: Mentoring
+    url: mentor/
+    weight: 14
