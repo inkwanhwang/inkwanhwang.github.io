@@ -61,7 +61,7 @@ education:
     date_start: 2021-02-21
     date_end: ''
     summary: |
-      GPA: 3.91/4.30
+      GPA: 3.92/4.30
   - area: Incheon Science High School
     institution: ''
     date_start: 2019-03-02
